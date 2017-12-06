@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Student Data</title>
+            <body>
+<form id="form1">
+                    Enter Name : <input type="text" id="name"></input><br>
+                    Enter Age : <input type="text" id="age"></input><br>
+                    Enter Mark1 : <input type="text" id="m1"></input><br>
+                    Enter Mark2 : <input type="text" id="m2"></input><br>
+                    Enter Mark3 : <input type="text" id="m3"></input><br>
+                    <input type="submit" value="Add" onclick="return add(event)"></input>
+</form>
+
+<form>
+        Enter Name : <input type="text" id="searchage"/><br>
+        <input type="submit" value="search Age" onclick="return search(event)"/>
+        </form>
+
+        <form>
+                        Enter Name : <input type="text" id="perc"/><br>
+                        <input type="submit" value="Percentage" onclick="return calculate(event)"/>
+                        </form>
+
+<script>
+                    
+                    var arr=[];
+                    var student={
+                                    name:"",
+                                    age:0,
+                                    marks:[]
+                                                 
+                               }
+
+                 function add(event)
+                    {
+                        event.preventDefault(event);
+                        var form=document.getElementById('form1');
+                    student.name=form.name.value;
+                    student.age=form.age.value;
+                    student.marks.push(form.m1.value);
+                    student.marks.push(form.m2.value);
+                    student.marks.push(form.m3.value);
+                    arr.push(student);
+                   
+                    console.log(arr);
+                    }
+                    
+
+                    function search(event)
+                    {
+                            event.preventDefault(event);
+                        var form2=document.getElementById("searchage").value;
+                        for(var i=0;i<student.length;i++){
+                        if(student[i].name == form2)
+                        {
+                               alert(student[i].age);
+                        }
+                }
+                    }
+                    
+                    function calculate(event)
+                    {
+                       avg = 0;
+                            event.preventDefault(event);
+                            var form3=document.getElementById("perc").value;
+                              
+                            for(var i=0 ; i<student.length ; i++)
+                            {
+                            if(student.name == form3)
+                            {
+                                    
+                                    for(var i=0 ; i<student.marks.length ; i++)
+                                    {
+                                       avg = avg + student.marks[i]/3;
+                                   
+                                   
+                                    }
+                                    document.write(avg);
+                                }
+                            }
+
+                    }
+
+
+                </script>
+            
+                </body>
+
+
+        </head>
+
+</html>

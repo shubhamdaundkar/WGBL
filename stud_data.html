@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            Students Record
+        </title>
+        </head>
+        <body>
+            <form>
+                Enter Name : <input type="text" id="name" maxlength="30" /><br><br>
+                Enter Age : <input type="text" id="age" max="10" /><br><br>
+                Science : <input type="text" id="Science" max="10"/><br><br>
+               Maths : <input type="text" id="Maths" max="10" /><br><br>           
+                English : <input type="text" id="English" max="10"/><br><br>
+               <button onclick="savedata()">Add</button>
+                </form>
+                  </body>
+                  <script>
+                      function savedata()
+                      var students =[];
+                      {
+
+                        var details = 
+                                {
+                                name: "",
+                                age: 0,
+                                marks: []
+                                }
+                       var name=document.getElementById("name").value;
+                      var age=document.getElementById("age").value;
+                      var science=document.getElementById("Science").value;
+                      var maths=document.getElementById("Maths").value;
+                      var english=document.getElementById("English").value;
+
+                    document.getElementById("name").innerHTML=name;
+                    document.getElementByIdI("age").innerHTML=age;
+                    document.getElementById("Science").innerHTML=science;
+                    document.getElementById("Maths").innerHTML=maths;
+                    document.getElementById("English").innerHTML=english;
+                     
+                      
+                      }
+
+                      
+                  </script>
+</html>
