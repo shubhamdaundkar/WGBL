@@ -18,10 +18,10 @@ function add(event) {
   //JSON.stringify(obj).match(g).length
   //var result = JSON.stringify(students).match(/[^\\]":/g).length+1;
 
-  // flat = a => a.reduce((p,c) => p.concat(Array.isArray(c) ? flat(c) : c),[]);
-  // result = flat(details).length;
+   flat = a => a.reduce((p,c) => p.concat(Array.isArray(c) ? flat(c) : c),[]);
+   result = flat(students).length;
   //console.log(result);
-  var result=JSON.stringify(students).match(/[^\\]":/g).length;
+  //var result=JSON.stringify(students).match(/[^\\]":/g).length;
 
   var index;
   details.name = form.name.value;
@@ -42,7 +42,7 @@ function add(event) {
     //var result = JSON.stringify(students).match().length++;
    // console.log(result);
     // get the reference for the body
-     var body1 = document.getElementsByTagName("body");
+     var body = document.getElementsByTagName("body");
     // //  
     // //   // creates a <table> element and a <tbody> element
     var tbl1  = document.createElement("table");
@@ -66,9 +66,9 @@ function add(event) {
             
     // put the <tbody> in the <table>
     tbl1.appendChild(tblBody);
-            
+            }
     // // appends <table> into <body>
-     body1.appendChild(tbl1);
+     body.appendChild(tbl1);
     // // sets the border attribute of tbl to 2;
   
           }
@@ -148,5 +148,5 @@ function add(event) {
     // row.appendChild(per);
     // row.appendChild(res); 
     // document.getElementById("index").appendChild(row);
-
+//}
 
