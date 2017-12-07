@@ -2,8 +2,7 @@
 var students = [];
 function add(event) {
   event.preventDefault();
-  var details =
-    {
+  var details = {
       name: "",
       age: 0,
       marks: []
@@ -17,39 +16,30 @@ function add(event) {
   }
   //JSON.stringify(obj).match(g).length
   //var result = JSON.stringify(students).match(/[^\\]":/g).length+1;
-
    flat = a => a.reduce((p,c) => p.concat(Array.isArray(c) ? flat(c) : c),[]);
    result = flat(students).length;
   //console.log(result);
   //var result=JSON.stringify(students).match(/[^\\]":/g).length;
-
   var index;
-  details.name = form.name.value;
-  details.age = form.age.value;
-  details.marks.push(form.m1.value);
-  details.marks.push(form.m2.value);
-  details.marks.push(form.m3.value);
-  students.push(details);
+    details.name = form.name.value;
+    details.age = form.age.value;
+    details.marks.push(form.m1.value);
+    details.marks.push(form.m2.value);
+    details.marks.push(form.m3.value);
+    students.push(details);
   var avg = 0;
-
-
   for (var j = 0; j < students[i].marks.length; j++) {
     avg += (students[i].marks[j] / 3);
   }
-
-  function generate_table(data) {
-
+    function generate_table(data) {
     //var result = JSON.stringify(students).match().length++;
    // console.log(result);
     // get the reference for the body
-     var body = document.getElementsByTagName("body");
-    // //  
-    // //   // creates a <table> element and a <tbody> element
+     var body = document.getElementsByTagName("body");  
+    //creates a <table> element and a <tbody> element
     var tbl1  = document.createElement("table");
     var tblBody = document.createElement("tbody");
-    // //  
-    // // creating all cells
-    
+     // creating all cells
     for (var i = 0; i < students.length; i++) {
       // creates a table row
       var row = document.createElement("tr");
@@ -62,21 +52,17 @@ function add(event) {
         cell.appendChild(cellText);
         row.appendChild(cell);
       // add the row to the end of the table body
-      document.getElementById("index").appendChild(row);
-            
+      document.getElementById("index").appendChild(row);    
     // put the <tbody> in the <table>
-    tbl1.appendChild(tblBody);
-            }
+     tbl1.appendChild(tblBody);
+      }
     // // appends <table> into <body>
      body.appendChild(tbl1);
     // // sets the border attribute of tbl to 2;
-  
-          }
         }
-
-  generate_table(students);
-  console.log(details);
-
+   }
+      generate_table(students);
+      console.log(details);
 }
 
 
